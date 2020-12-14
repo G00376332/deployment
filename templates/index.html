@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+	Final data representation project 2020.
+	This project base on my Blueberry farm wesite and will be linked to harvest data by employee.
+-->
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title id="head-title">Balticberry - Home</title>
+<meta name="keywords" content="blueberry, berry, fruits, soft fruits, farm" />
+<meta name="description" content="Growing, planting and harvesting blueberries." />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="css\fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css\main.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<body onload="indexMain()">
+	<div id="page-container">
+		<div id="wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<img src="images\logoduze.png" alt="logo" width="150" height="80">
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="\home" data-clone="Home">Home</a></li>
+
+						<li id="logbut"><a href="#" onclick="document.getElementById('login-box').style.display='block'" data-clone="Login">Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="fade" id="idx-banner"></div>
+			<div class="container">
+				<div class="title">
+					<h2 id="idx-text"></h2>
+				</div>
+			</div>
+		</div>
+		<div id="login-box" class="modal">
+		  
+		  <form name = "flogin" class="modal-content animate" method="post" id="loginform">
+			<div class="imgcontainer">
+			  <span onclick="document.getElementById('login-box').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+
+			<div class="l-container">
+			  <label for="uname"><b>Username</b></label>
+			  <input type="text" placeholder="Enter Username" name="uname" required>
+
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+				
+			  <button type="submit" id="submit">Login</button>
+			</div>
+
+			<div class="l-container" style="background-color:#f1f1f1">
+			  <button type="button" onclick="document.getElementById('login-box').style.display='none'" class="cancelbtn">Cancel</button>
+			</div>
+		  </form>
+		</div>
+		<button onclick="topFunction()" id="topBtn" title="Go to top"> &#8682 </button>
+		<footer id="footer">Copyright ©2020 <a href="http://www.webproject2020.pl">webproject2020</a>, All Rights Reserved.</footer>
+	</div>
+</body>
+<!-- To avoid errors js file has to be placed here to make sure that page content is loaded before executing a script.  -->
+<script src="project.js"></script>
+<!-- To get nice icons -->
+<script src="https://kit.fontawesome.com/da9dbf1552.js" crossorigin="anonymous"></script>
+</html>

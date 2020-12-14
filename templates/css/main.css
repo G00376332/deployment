@@ -1,0 +1,608 @@
+
+/* Final webproject2020 www.webproject2020.pl */
+/* Define the main colour scheme for the project */
+/* https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css */
+:root {
+    --white:#FFFFFF;
+	--green:#79C255;
+	--blue:#0000FF;
+	--yellow:#FFFF00;
+	--darkblue:#00008B;
+	--purple:#800080;
+	--grey:#525451;
+	--lightgrey:#777;
+}
+
+html, body
+{
+	height: 100%;
+}
+	
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background: var(--green);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11pt;
+	font-weight: 200;
+	color: var(--white);
+}
+
+
+h1, h2, h3
+{
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	text-align: center;
+	color: var(--white);
+}
+
+p, ol, ul
+{
+	margin-top: 0;
+	color: var(--white);
+	text-align: justify;
+}
+
+ol, ul
+{
+	padding: 0;
+	list-style: none;
+}
+
+ul.actions
+{
+	text-align: center;
+}
+	
+p
+{
+	line-height: 180%;
+}
+
+
+a
+{
+	color: var(--white);
+}
+
+a:hover
+{
+	text-decoration: none;
+} 
+
+fieldset 
+{
+	border:0px;
+	outline:0px
+}
+
+iframe
+{
+	position: relative;
+    width: 100%;
+    display: block;
+    height: 500px;
+    border: 0;
+}
+
+footer
+{
+	margin: 0px;
+	padding: 0px;
+	background: var(--green);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.8em;
+	font-weight: 200;
+	color: var(--white);
+}
+
+.container
+{
+	overflow: hidden;
+	margin: auto 10px auto 10px;
+	width: auto;
+}
+
+.txt-container
+{
+	overflow: hidden;
+	margin: auto;
+	width: 70%;
+}
+
+.main-text
+{
+	text-align: center;
+}
+
+/*********************************************************************************/
+/* Page container                                                                       */
+/*********************************************************************************/
+
+#page-container 
+{
+  position: relative;
+  min-height: 100vh;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+		
+#header
+{
+	position: relative;
+	padding: 5em 0em;
+}
+
+#header h1
+{
+	color: var(--darkblue) !important;
+}
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+.title
+{
+	margin-bottom: 3em;
+}
+
+.title h2
+{
+	text-transform: uppercase;
+	font-size: 2.7em;
+}
+
+.title .byline
+{
+	font-size: 1.7em;
+}	
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+.button
+{
+	display: inline-block;
+	padding: 0em 3em;
+	background: var(--white);
+	border-radius: 8px;
+	letter-spacing: 0.20em;
+	line-height: 4em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 0.7em;
+	color: var(--blue);
+	width: auto;
+	height: auto;
+}
+
+.button:before
+{
+	display: inline-block;
+	background: var(--white);
+	margin-right: 1em;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	text-align: center;
+	color: var(--grey);
+}
+
+/* button - go to top */
+	
+#topBtn 
+{
+	display: none;
+	position: fixed;
+	width: 5%;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 1.5em;
+	font-style: bold;
+	border: none;
+	outline: none;
+	background-color: var(--darkblue);
+	color: var(--white);
+	cursor: pointer;
+	padding: 0.5em;
+	border-radius: 4px;
+}
+
+#topBtn:hover 
+{
+	background-color: var(--grey);
+}
+
+/*********************************************************************************/
+/* 2-column                                                                      */
+/*********************************************************************************/
+.tbox1,
+.tbox2
+{
+	width: 575px;
+}
+
+.tbox1
+{
+	float: left;
+	padding-top: 3em;
+	text-align: center;
+	/* margin: auto 300px auto 300px; */
+}
+
+.tbox2
+{
+	float: right;
+	text-align: center;
+	/* margin: auto 300px auto 300px; */
+}
+
+#wrapper
+{
+	background: var(--white); 
+}
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+#logo
+{
+	position: absolute;
+	top: 2em;
+	left: 0;
+}
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+#menu
+{
+	position: absolute;
+	top: 4.5em;
+	right: 0;
+	margin:0px auto;
+	float: none;
+	font:normal 12px 'Trebuchet MS',Trebuchet,Arial,Sans-Serif;
+	color:var(--white);
+	text-transform:uppercase;
+	
+}
+
+#menu ul 
+{
+	height:50px;
+	margin:0px 0px;
+	padding:0px 0px;
+	overflow:hidden;
+}
+
+#menu li 
+{
+	float:left;
+	display:inline;
+	list-style:none;
+	margin:0px 0px;
+	padding:0px 0px;
+}
+
+#menu a,
+#menu a:before 
+{
+	display:block;
+	margin:0px 0px;
+	padding:0px 30px;
+	line-height:50px;
+	color:var(--white);
+	text-decoration:none;
+	background-color:#0099;
+	background-image:-webkit-linear-gradient(top, var(--purple) 0%, var(--blue) 50%, var(--blue) 50%, var(--darkblue) 100%);
+	-webkit-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+	-moz-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+	box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+	position:relative;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+#menu a:before 
+{
+	content:attr(data-clone);
+	position:absolute;
+	top:100%;
+	right:0px;
+	left:0px;
+	display:block;
+	background-color:var(--green);
+	background-image:-webkit-linear-gradient(top, var(--yellow), var(--green));
+	border-top:2px solid rgba(0,0,0,0.2);
+	color:#333;
+}
+
+#menu a:hover 
+{
+	margin-top:-50px;
+	margin-bottom:1px;
+}
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+#idx-banner
+{
+	overflow: hidden;
+	padding: 15em 0em;
+	background: url(images/back-now.jpg) no-repeat center;
+	background-size: cover;
+	text-align: center;
+	color: rgba(255,255,255,.8);
+}
+
+#cont-banner
+{
+	overflow: hidden;
+	background: var(--white);
+	background-size: cover;
+	text-align: center;
+}
+
+#banner
+{
+	overflow: hidden;
+	padding: 15em 0em;
+	background: url(images/back-now.jpg) no-repeat center;
+	background-size: cover;
+	text-align: center;
+	color: rgba(255,255,255,.8);
+}
+
+#banner .title
+{
+	margin-bottom: 1em;
+	text-transform: uppercase !important;
+}
+
+#banner .title h2
+{
+	color: rgba(255,255,255,.6);
+}
+
+#banner .title .byline
+{
+	color: rgba(255,255,255,.6);
+}
+
+#banner .button
+{
+	margin-top: 3em;
+	background: #589937 !important;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0% {
+    
+	opacity:0;
+  }
+   50% {
+    
+	opacity:1;
+  }
+  100% {
+    
+	opacity:0;
+  }
+
+}
+/*********************************************************************************/
+/* Index text                                                                    */
+/*********************************************************************************/
+#idx-text{
+	animation-name: idx-text;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes idx-text {
+  0% {
+    transform: scale(1.6);
+	opacity:1;
+  }
+   50% {
+    transform: scale(0.4);
+	opacity:0;
+  }
+  100% {
+    transform: scale(1.6);
+	opacity:1;
+  }
+
+}
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+#content
+{
+}
+/*********************************************************************************/
+/* Login form                                                                      */
+/*********************************************************************************/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: var(--darkblue);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.l-container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/*********************************************************************************/
+/* Database                                                                      */
+/*********************************************************************************/
+#data
+{
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+#createUpdateForm 
+{
+	width: 70%;
+	text-align: right;
+}
+
+#harvestTable 
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#harvestTable td,
+#harvestTable th 
+{
+	border: 1px solid var(--white);
+	padding: 8px;
+}
+
+#harvestTable tr:nth-child(1) 
+{
+	background-color: var(--darkblue);
+}
+
+#harvestTable tr:hover {
+	background-color: var(--lightgrey);
+}
+
+
+rect:hover 
+{
+	fill:var(--lightgrey);
+
+}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;   /* Footer height */
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;  
+}
+

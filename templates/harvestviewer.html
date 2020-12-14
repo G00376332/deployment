@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+	Final webproject2020
+
+-->
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title id="head-title">Logged Memebers</title>
+<meta name="keywords" content="blueberry, berry, fruits, soft fruits, farm" />
+<meta name="description" content="Growing, planting and harvesting blueberries." />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+<link href="css\fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css\main.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<img src="images\logoduze.png" alt="logo" width="150" height="80">
+				</div>
+				<h1>Registered Members Area Only</h1>
+				<div id="menu">
+					<ul>
+						<li id="logbut"><a href="#logout" onclick="logout()" data-clone="Logout">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="txt-container main-text" id="dat">
+			<div class="title" id="getStarted">
+				<h2>Blueberry Harvest Database</h2>
+			</div>
+            <div id="main-text"></div>
+            <div id="data">
+				 <div id="create-update" style="display:none">
+
+						<h2 id="create-update-title"></h2>
+
+						<table id="createUpdateForm">
+							<tr>
+								<td>Employee ID</td>
+								<td><input type="text" name="id" id="idInput" placeholder=""></td>
+							</tr>
+							<tr>
+								<td>Employee Name</td>
+								<td><input type="text" name="employeeName" placeholder="Jan Nowak"></td>
+							</tr>
+							<tr>
+								<td>Section</td>
+								<td><input type="text" name="fieldSection" placeholder="A1"></td>
+							</tr>
+							<tr>
+								<td>Variety</td>
+								<td><input type="text" name="variety" placeholder="Bluecrop"></td>
+							</tr>
+							<tr>
+								<td>Harvest Quantity [kg]</td>
+								<td><input type="text" name="quantity" placeholder="100"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button id="create-button" onclick="doCreate()">Create</button>
+									<button id="update-button" onclick="doUpdate()">Update</button>
+								</td>
+							</tr>
+					</table>
+				</div>
+				<div id="display">
+
+					<!----------------- harvest Table ------------------------------------------>
+
+					<button id="showCreate-button" onClick="showCreate()">Create</button>
+					<table id="harvestTable" class="table">
+						<tr>
+							<th>Employee ID</th>
+							<th>Employee Name</th>
+							<th>Section</th>
+							<th>Variety</th>
+							<th>Harvest Quantity [kg]</th>
+							<th>Update</th>
+							<th>Delete</th>
+						</tr>
+
+					</table>
+
+				</div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="topBtn" title="Go to top"> &#8682 </button>
+		<footer id="footer">Copyright ©2020 <a href="http://www.webproject2020.pl">webproject2020</a>, All Rights Reserved.</footer>
+	</div>
+</body>
+<!-- To avoid errors js file has to be placed here to make sure that page content is loaded before executing a script.  -->
+<script src="project.js"></script>
+<!-- To get nice icons -->
+<script src="https://kit.fontawesome.com/da9dbf1552.js" crossorigin="anonymous"></script>
+</html>
